@@ -2,7 +2,14 @@
 <html lang="id">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Siaga Ujung Genteng | Evakuasi Tsunami</title>
+<title>SIGAP PESISIR | Evakuasi Tsunami Ujung Genteng</title>
+<meta name="theme-color" content="#10283f">
+<meta name="description" content="Prototype informasi dan simulasi evakuasi tsunami Ujung Genteng.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{--navy:#10283f;--blue:#176b87;--cyan:#dff5f6;--red:#c93636;--ink:#172b3a;--muted:#607487;--bg:#f2f6f8}
@@ -22,7 +29,16 @@ label{display:block;font-size:12px;color:var(--muted);margin:10px 0 5px}input{wi
 .status{font-size:12px;font-weight:800;padding:5px 9px;border-radius:20px;background:#e9f4ee;color:#216b46}.status.demo{background:#fff0d8;color:#865400}
 @media(max-width:800px){header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}#map{height:58vh;min-height:390px}.metrics{grid-template-columns:repeat(2,1fr)}main{margin-top:12px}}
 </style></head>
-<body>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .then(reg => console.log("SIGAP PESISIR siap:", reg.scope))
+      .catch(err => console.warn("Service worker gagal:", err));
+  });
+}
+</script>
+  <body>
 <header><div><div class="brand">🌊 SIAGA UJUNG GENTENG</div><div class="sub">Prototype informasi dan simulasi evakuasi tsunami · Ujung Genteng, Sukabumi</div></div><div class="pill">DEMO AKADEMIK · BUKAN SISTEM RESMI BMKG</div></header>
 <main>
 <div class="alert"><strong>⚠ SIMULASI PERINGATAN TSUNAMI</strong><p>Mode demonstrasi untuk menguji tampilan alur informasi. Ini bukan peringatan kejadian nyata dan tidak terhubung ke BMKG.</p></div>
