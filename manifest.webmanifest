@@ -1,0 +1,21 @@
+{
+  "name": "SIGAP PESISIR — Ujung Genteng",
+  "short_name": "SIGAP PESISIR",
+  "description": "Prototype informasi dan simulasi evakuasi tsunami Ujung Genteng.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f6f8",
+  "theme_color": "#10283f",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
